@@ -21,6 +21,7 @@ from .mllama.modelings_intervenable_mllama import *
 from .gpt_oss.modelings_intervenable_gpt_oss import *
 from .whisper.modelings_intervenable_whisper import *
 from .wav2vec2bert.modelings_intervenable_wav2vec2bert import *
+from .cohere2.modelings_intervenable_cohere2 import *
 
 #########################################################################
 """
@@ -94,6 +95,7 @@ type_to_module_mapping = {
     hf_models.whisper.modeling_whisper.WhisperModel: whisper_type_to_module_mapping,
     hf_models.whisper.modeling_whisper.WhisperForConditionalGeneration: whisper_lm_type_to_module_mapping,
     hf_models.wav2vec2_bert.modeling_wav2vec2_bert.Wav2Vec2BertModel: wav2vec2bert_type_to_module_mapping,
+    hf_models.cohere2.modeling_cohere2.Cohere2ForCausalLM: cohere2_lm_type_to_module_mapping,
 }
 if enable_blip:
     type_to_module_mapping[BlipWrapper] = blip_wrapper_type_to_module_mapping
@@ -143,6 +145,7 @@ type_to_dimension_mapping = {
     hf_models.whisper.modeling_whisper.WhisperModel: whisper_type_to_dimension_mapping,
     hf_models.whisper.modeling_whisper.WhisperForConditionalGeneration: whisper_lm_type_to_dimension_mapping,
     hf_models.wav2vec2_bert.modeling_wav2vec2_bert.Wav2Vec2BertModel: wav2vec2bert_type_to_dimension_mapping,
+    hf_models.cohere2.modeling_cohere2.Cohere2ForCausalLM: cohere2_lm_type_to_dimension_mapping,
 }
 
 if enable_blip:
